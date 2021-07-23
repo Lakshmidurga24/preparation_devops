@@ -1,0 +1,52 @@
+first creating empty repo using $ git init(empty repo)
+2)git config --global user.name "give name"(its like author and who changed)
+3)git config --global user.email "config any email"
+4)git remote add aliasname repo url
+5)git add . or file( working area to stagging area)
+6) git commit -m "give some msg about commit"(staging area to local repo)
+7) git push aliasname master or any branch name(local repo to remote repo)
+8) git log (list all commit ids)
+9) git show commit id(more info about that commit)
+10) git remote(ll get alias name)
+    git remote -v (-v verbose)
+11) git ls-files(list all fiels in staing area)
+git ls-tree <branchname> # to list files in branch repo
+git ls-tree HEAD #to list all files in local repo
+git status #
+git clean -n -f #it will show preview before deleting
+git clean -f #it will delete in working area
+git branch
+----------
+git branch #list the local repo branch
+git branch -r # list the remote repo braches
+git branch -a #list the all branches in local and remote
+git branch <branch name> #creating branch
+git checkout <branchname> or git switch <branchname> # swithing fromm one to another branch
+git checkout -b <branchname>
+  or
+git switch -c <branch name># creating new branch and switching to that new branch 
+git push alias <branchname> # particualr brnch to push
+git push alias --all # pushing all files at a time
+git merge <banch name> # it will merge file from required branch(branch name) to current branch
+git merge and git rebase diff
+after merge both commit id and new commit id wil be present whereas in rebase only new commit id is pressent in current branch
+git cherry-pick <commitid> # particular commt id in other branch to merge with current branch
+---
+git reset <filename> # from staggn area to working area
+git revert <commit id> # like revision it ll go to previous version
+git stash
+--------
+git stash # to store content in stagging area
+git stash ls # list all stash ,stash@{0} like that it will save
+git stash apply stash@{0} # it will apply in current branch will not delet in stash
+git stash pop stash@{0}# it will apply and delet the stash
+git stash drop stash@{0}# to delet stash
+git pull and git fetch
+----------------------
+git init # is required for git pull adn fetch
+git pull <repolinkurl> <branchname># git pull= git fetch+git merge
+# git init
+#git remote add alais remoteurl# alias is nothing but repourl
+git fetch alias <branc name>
+git merge alias/<branchname>
+git 
